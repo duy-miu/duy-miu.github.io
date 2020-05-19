@@ -1,0 +1,35 @@
+*{
+    color: white;
+    background-color: olive;
+    font-family: "Georgia", "Tahoma", ;
+}
+.adj {
+    color: burlywood;
+    font-family: Arial;
+}
+a {
+    color: red;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1 h3 {
+    color: lightblue;
+    font-family: "Courier New";
+}
+h1{
+    font-size: 3vw;
+}
+p::first-letter{
+    font-size: 1.5em;
+}
+dt
+{
+    font-size: 0.8em;
+    color: yellow;
+}
+dd
+{
+    font-size: 0.7em;
+}
