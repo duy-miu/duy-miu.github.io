@@ -49,6 +49,9 @@ div#review > div:nth-child(1){
 div#review > div:nth-child(1) > img{
     border-top-left-radius: 20px;        
 }
+p > br::after{
+    font-style: italic;
+}
 #overview{
     width: 250px;
     float: right;
