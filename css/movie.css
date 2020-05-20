@@ -90,9 +90,6 @@ dt{
 li{
     list-style-type: none; 
 }
-div > a > img{
-    opacity: 50%;
-}
 .review {
     background-color: #A2B964;    
     padding: 5px;  
@@ -102,11 +99,12 @@ div > a > img{
     margin-bottom: 0px;
     text-align: center;
 }
-div#validators > a > img {
-    height: 40px;
+div#validators {
     position: fixed;
     bottom: 10px;
-    right: 0px;
-    margin-right: 5px;
-    padding-right: 5px;
+    right: 5px;
+}
+
+div > ul > li > a > img{
+    opacity: 50%;
 }
