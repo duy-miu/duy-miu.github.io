@@ -60,7 +60,6 @@ div#review > div:nth-child(1) > img{
     padding: 5px;
     column-count: 2;
     column-gap: 2%;
-    column-width: 47%;
 }
 div#quotes > p:nth-child(odd) > img{
     padding-right: 5px;
