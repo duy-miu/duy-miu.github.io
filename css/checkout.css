@@ -4,6 +4,8 @@
 }
 body{
     font-size: 10pt;
+    background: white;
+    background: linear-gradient(90deg, white 0%, yellow 35%, cyan 100%);
 }
 #banner{
     background-color: khaki;
