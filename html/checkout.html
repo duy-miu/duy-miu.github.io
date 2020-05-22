@@ -48,11 +48,11 @@
                         </span>
                         <span>
                             <label for="email">Email <span>*</span></label>
-                            <input type="email" id="email" name="email" required />
+                            <input type="text" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                         </span>
                         <span>
                             <label for="phone">Phone <span>*</span></label>
-                            <input type="phone" id="phone" name="phone" required />
+                            <input type="text" id="phone" name="phone" required pattern="[0-9]{10,15}" />
                         </span>
                         <span>
                             <label for="birthday">Birthday</label>
@@ -80,6 +80,7 @@
                         <span>
                             <label for="billing-country">Country <span>*</span></label>
                             <select id="billing-country" name="billing-country">
+                                <option></option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
@@ -350,6 +351,7 @@
                         <span>
                             <label for="shipping-country">Country <span>*</span></label>
                             <select id="shipping-country" name="shipping-country">
+                                <option></option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
@@ -605,7 +607,7 @@
                         <span>
                             <label for="card-type">Card Type <span>*</span></label>
                             <select id="card-type" name="card-type" required>
-                                <option>Select</option>
+                                <option></option>
                                 <option>Credit</option>
                                 <option>Debit</option>
                                 <option>Paypal</option>
@@ -618,9 +620,9 @@
                           <label for="card-number">Number <span>*</span></label><input id="card-number" name="card-number" placeholder="####-####-####-####" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" type="text" required />
                         </span>
                         <span>
-                            <label for="expiration">Expiration <span>*</span></label>
+                            <label>Expiration <span>*</span></label>
                             <select id="exp-month" name="exp-month" required>
-                                <option>Select</option>
+                                <option></option>
                                 <option value="01">January</option>
                                 <option value="02">February </option>
                                 <option value="03">March</option>
@@ -635,7 +637,7 @@
                                 <option value="12">December</option>
                             </select>
                             <select id="exp-year" name="exp-year" required>
-                                <option>Select</option>
+                                <option></option>
                                 <option value="16"> 2020</option>
                                 <option value="17"> 2021</option>
                                 <option value="18"> 2022</option>
