@@ -26,3 +26,17 @@ textarea {
 	font-family: monospace;
 	font-size: 12pt;
 }
+
+li{
+    list-style-type: none;
+}
+
+div#validators {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+}
+
+div > ul > li > a > img{
+    opacity: 50%;
+}
