@@ -16,6 +16,10 @@ function decorate(){
 
 
 function bling(){
+    //var s = 5+'3'*2+"4"/2;
+    var s = "6" === 6;
+    alert(s);
+
     //alert("Bling");
     var checkbox = document.getElementById("checkbox");
     var text = document.getElementById("text");

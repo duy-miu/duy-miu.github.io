@@ -1,0 +1,48 @@
+body{
+    background-color: #CCCCFF;
+    font: 14pt bold "sans-serif";
+    margin: 0px;
+}
+
+#title {
+    font-size: 34pt;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}
+
+#heart {
+    color: red;
+    margin: 0px;
+}
+
+div {
+    text-align: center;
+}
+#text {
+    margin: auto;
+    width: 90%;
+    height: 400px;
+}
+
+fieldset {
+    display: inline;  
+    border: 5px solid black;  
+    font-weight: bold;
+}
+
+
+
+li{
+    list-style-type: none;
+}
+
+div#validators {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+}
+
+div > ul > li > a > img{
+    opacity: 50%;
+}
