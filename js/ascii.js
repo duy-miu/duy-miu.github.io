@@ -105,7 +105,7 @@ window.onload = function() {
             clearInterval(timerArr[i]);
         }    
         timerArr = null;   
-        setTimeout (act, 1000, animationStr);
+        setTimeout (act, delay, animationStr);
 
         ddlAnimation.disabled = false;
         ddlSize.disabled = false;
