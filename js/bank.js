@@ -1,22 +1,25 @@
+
 var Database = (function() {
-    _data = {};
+    "use strict";
+    var _data = {};
   
-    _create = function(object) {
-      return _data[object.id] = object;
+    var _create = function(object) {
+      return (_data[object.id] = object);
     };
 
-    _read = function(id) {
+    var _read = function(id) {
       return _data[id];
     };
 
-    _update = function(object) {
-      return _data[object.id] = object;
-    };
-    _delete = function(id) {
-      return _data[id] = null;
+    var _update = function(object) {
+      return (_data[object.id] = object);
     };
 
-    _getSize = function(){
+    var _delete = function(id) {
+      return (_data[id] = null);
+    };
+
+    var _getSize = function(){
         var total = 0;
         for (var obj in _data) {
             total++;
@@ -24,11 +27,11 @@ var Database = (function() {
         return total;
     };
 
-    _generateId = function(){
+    var _generateUniqueId = function(){
         return  Date.now();
     };
 
-    _deposit = function(object) {   //object should be in format {id:accountId, amount: depositAmount}
+    var _deposit = function(object) {   //object should be in format {id:accountId, amount: depositAmount}
         //find the account to update balance
         var obj = _read(object.id);
         if(obj != null){
@@ -36,7 +39,7 @@ var Database = (function() {
         }
     };
 
-    _transfer = function(object) {   //object should be in format: {fromId:fromAccountId, toId: toAccountId, amount: transferAmount}
+    var _transfer = function(object) {   //object should be in format: {fromId:fromAccountId, toId: toAccountId, amount: transferAmount}
         //find the accounts to update balance
         var fromObj = _read(object.fromId);
         var toObj = _read(object.toId);
@@ -49,7 +52,7 @@ var Database = (function() {
         }
     };
 
-    _display = function(){
+    var _display = function(){
         var html = "<table>";
         html += "<caption>List of accounts</caption>";
         html += "<tr>";
@@ -76,7 +79,7 @@ var Database = (function() {
 
     return {
         create: _create,  
-        getUniqueId: _generateId,      
+        getId: _generateUniqueId,      
         deposit: _deposit,      
         transfer: _transfer,
         display: _display,  
@@ -91,7 +94,7 @@ window.onload = function(){
     btnCreate.onclick = function(){
         var newName = document.getElementById("newName").value;
         var initialDeposit = document.getElementById("initialDeposit").value;
-        var id = Database.getUniqueId();
+        var id = Database.getId();
         Database.create({id:id, name:newName, balance: initialDeposit, status: 'active'});
     };
 
@@ -118,4 +121,4 @@ window.onload = function(){
         var accountListInfo = document.getElementById("accountListInfo");
         accountListInfo.innerHTML = Database.display();
     };
-}
+};

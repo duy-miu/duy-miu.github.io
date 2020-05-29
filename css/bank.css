@@ -26,18 +26,21 @@ caption {
 }
 
 fieldset {
+    background-color: lavender;
     border: 5px solid black;  
-    font-weight: bold;
     display: inline;
+    text-align: right;
+    margin: 20px;
+}
+
+legend{
     text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-span {    
-    width: 150px;
-}
-
-span > input {    
-    width: 130px;
+input {    
+    margin: 3px;
 }
 
 #client-view {
@@ -51,7 +54,7 @@ span > input {
 
 #server-view {
     position: absolute;
-    top: 205px;
+    top: 270px;
     left:20px;
     font-size: 30pt;
     color:blue;    
