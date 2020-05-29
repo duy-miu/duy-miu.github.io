@@ -34,8 +34,18 @@ var Database = (function() {
     var _deposit = function(object) {   //object should be in format {id:accountId, amount: depositAmount}
         //find the account to update balance
         var obj = _read(object.id);
+        if(obj != null){            
+            var balance = parseFloat(obj.balance)+parseFloat(object.amount);
+            _update({id:object.id, name: obj.name, balance: balance, status: obj.status});
+        }
+    };
+
+    var _withdraw = function(object) {   //object should be in format {id:accountId, amount: depositAmount}
+        //find the account to update balance
+        var obj = _read(object.id);
         if(obj != null){
-            _update({id:object.id, name: obj.name, balance: parseFloat(obj.balance)+parseFloat(object.amount), status: obj.status});
+            var balance = parseFloat(obj.balance)-parseFloat(object.amount);
+            _update({id:object.id, name: obj.name, balance: balance, status: obj.status});
         }
     };
 
@@ -45,9 +55,9 @@ var Database = (function() {
         var toObj = _read(object.toId);
         if(fromObj != null && toObj != null){
             //transfer if possible
-            if(fromObj.balance > object.amount){
-                _update({id:fromObj.id, name: fromObj.name, balance: parseFloat(fromObj.balance)-parseFloat(object.amount), status: fromObj.status});
-                _update({id:toObj.id, name: toObj.name, balance: parseFloat(toObj.balance)+parseFloat(object.amount), status: toObj.status});
+            if(parseFloat(fromObj.balance) >= parseFloat(object.amount)){
+                _withdraw({id:object.fromId, amount: parseFloat(object.amount)});
+                _deposit({id:object.toId, amount: parseFloat(object.amount)});
             }
         }
     };
@@ -94,8 +104,13 @@ window.onload = function(){
     btnCreate.onclick = function(){
         var newName = document.getElementById("newName").value;
         var initialDeposit = document.getElementById("initialDeposit").value;
-        var id = Database.getId();
-        Database.create({id:id, name:newName, balance: initialDeposit, status: 'active'});
+        if(newName !== "" &&  initialDeposit !== "" && !isNaN(initialDeposit)){
+            var id = Database.getId();
+            Database.create({id:id, name:newName, balance: initialDeposit, status: 'active'});
+            alert("Account has been created!");                  
+        }else{
+            alert("Invalid input!");
+        }
     };
 
     //deposit
@@ -103,7 +118,12 @@ window.onload = function(){
     btnDeposit.onclick = function(){
         var accountId = document.getElementById("accountId").value;
         var depositAmount = document.getElementById("depositAmount").value;
-        Database.deposit({id:accountId, amount: depositAmount});
+        if(accountId !== "" && depositAmount !== "" && !isNaN(accountId) && !isNaN(depositAmount)){
+            Database.deposit({id:accountId, amount: depositAmount});
+            alert("Money has been deposited!");
+        }else {
+            alert("Invalid input!");
+        }
     };
 
     //transfer
@@ -111,8 +131,13 @@ window.onload = function(){
     btnProcess.onclick = function(){
         var fromAccountId = document.getElementById("fromAccountId").value;
         var toAccountId = document.getElementById("toAccountId").value;
-        var transferAmount = document.getElementById("depositAmount").value;
-        Database.transfer({fromId:fromAccountId, toId: toAccountId, amount: transferAmount});
+        var transferAmount = document.getElementById("transferAmount").value;
+        if(fromAccountId !== "" && toAccountId !== "" && transferAmount !== "" && !isNaN(fromAccountId) && !isNaN(toAccountId) && !isNaN(transferAmount)){            
+            Database.transfer({fromId:fromAccountId, toId: toAccountId, amount: transferAmount});
+            alert("Money has been transferred!");
+        }else {
+            alert("Invalid input!");
+        }
     };
 
     //refresh

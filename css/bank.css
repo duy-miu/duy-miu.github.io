@@ -9,12 +9,14 @@
 }
 
 div {
+    margin-top: 10px;
     text-align: center;
 }
 
-table {
+table {    
     width: 80%;
     border: 1px solid black;
+    margin: auto;
 }
 
 tr:nth-child(odd){
