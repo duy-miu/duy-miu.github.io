@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Bank of MIU</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="CS472: Bank of MIU" />
+        <meta name="keywords" content="HTML, CSS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../css/bank.css" type="text/css" rel="stylesheet"/>        
+        <script src="../js/bank.js"></script>
+
+	</head>
+        
+	<body>       
+        
+        <div>
+            <span id="title">CS472: Bank of MIU</span>
+            <hr/>
+            <fieldset>
+                <legend>Create new account:</legend>
+                <span><label for="newName">Account Name: </label></span><span><input type="text" id="newName"/></span><br/>
+                <span><label for="initialDeposit">Initial deposit: </label></span><span><input type="text" id="initialDeposit"/></span><br/>
+                <input type="button" value="Create" id="btnCreate" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Depsosit:</legend>
+                <label for="accountId">Account ID: </label><input type="text" id="accountId"/><br/>
+                <label for="depositAmount">Amount: </label><input type="text" id="depositAmount"/><br/>                
+                <input type="button" value="Deposit" id="btnDeposit" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Transfer:</legend>
+                <label for="fromAccountId">From Account: </label><input type="text" id="fromAccountId"/><br/>
+                <label for="toAccountId">To Account: </label><input type="text" id="toAccountId"/><br/>
+                <label for="transferAmount">Amount: </label><input type="text" id="transferAmount"/><br/>                
+                <input type="button" value="Process" id="btnProcess" />
+            </fieldset>
+
+            <hr/>
+            <input type="button" value="Refresh" id="btnRefresh" />
+            <div id="accountListInfo">There is no data</div>
+            <div id="client-view">Client-View</div>
+            <div id="server-view">Server-View</div>
+            
+
+        </div>
+
+        <div id="validators">
+			<ul>
+            	<li>
+					<a href="https://validator.w3.org/check/referer">
+                		<img src="https://duy-miu.github.io/img/w3c-html.png" alt="Valid HTML5" />
+					</a> 
+				</li>      
+            	<li>
+					<a href="https://jigsaw.w3.org/css-validator/check/referer">
+						<img src="https://duy-miu.github.io/img/w3c-css.png" alt="Valid CSS" />
+					</a>
+                </li>
+                <!--
+                <li>
+                    <a href="https://webster.cs.washington.edu/jslint/?referer">
+                        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+                    </a>
+                </li>
+                -->
+			</ul>
+        </div>
+
+    </body>
+</html>
