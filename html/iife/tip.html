@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	CSE 190M, Summer 2012
+	This file is a tip calculator page using JavaScript.
+	-->
+	<!--
+	<script>
+	function calcTip() {
+		//var subtotalElem = 
+		//var tipElem = 
+		var totalElem = document.getElementById('total');
+		//var subtotal = 
+		//var tip = 
+		var total = 100000;
+		totalElem.innerHTML = '$' + total;
+	}
+	</script>
+	-->
+	<head>
+		<title>Tip Calculator</title>
+		<link href="../../css/tip.css" type="text/css" rel="stylesheet" />		
+	</head>
+
+
+	<body>
+		<h1>
+			<img id="logo" src="../../img/calc/calc.jpg" alt="++--**//" />
+			  Tip Calculator
+		</h1>
+
+		<div>
+			<label><input id="subtotal" type="text" value="" /> $ Subtotal</label>
+		</div>
+
+		<div>
+			<label><input id="tip" type="text" value="" /> % Tip</label>
+		</div>
+
+		<div>
+			<button id="btn">Calculate Tip</button>
+		</div>
+
+		<hr />
+
+		<div>
+			<h2>Your total:</h2>
+			<p id="total">$0.00</p>
+		</div>
+
+		<div id="validators">
+			<ul>
+            	<li>
+					<a href="https://validator.w3.org/check/referer">
+                		<img src="https://duy-miu.github.io/img/w3c-html.png" alt="Valid HTML5" />
+					</a> 
+				</li>      
+            	<li>
+					<a href="https://jigsaw.w3.org/css-validator/check/referer">
+						<img src="https://duy-miu.github.io/img/w3c-css.png" alt="Valid CSS" />
+					</a>
+                </li>
+			</ul>
+        </div>
+	</body>	
+</html>
+<script src="../../js/iife/tip.js"></script>

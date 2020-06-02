@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>ASCIImation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="CS472: ASCII Animation Viewer" />
+        <meta name="keywords" content="HTML, CSS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../../css/ascii.css" type="text/css" rel="stylesheet"/>
+        <script src="../../js/animations.js"></script>
+
+	</head>
+        
+	<body>
+        <span id="heart">&#9829;</span>
+        
+        <div>
+            <span id="title">CS472: ASCII Animation Viewer</span>
+            <textarea id="text" cols="80" rows="20"></textarea>
+
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <input type="button" value="Start" id="btnStart" />
+                <input type="button" value="Stop" id="btnStop" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="ddlAnimation">
+                    <option>Blank</option>
+                    <option>Exercise</option>
+                    <option>Juggler</option>
+                    <option>Bike</option>
+                    <option>Dive</option>
+                    <option>Custom</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="ddlSize">
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt" selected>Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Speed:</legend>
+                <input type="checkbox" id="chkTurbo"/> Turbo
+            </fieldset>
+
+        </div>
+
+        <div id="validators">
+			<ul>
+            	<li>
+					<a href="https://validator.w3.org/check/referer">
+                		<img src="https://duy-miu.github.io/img/w3c-html.png" alt="Valid HTML5" />
+					</a> 
+				</li>      
+            	<li>
+					<a href="https://jigsaw.w3.org/css-validator/check/referer">
+						<img src="https://duy-miu.github.io/img/w3c-css.png" alt="Valid CSS" />
+					</a>
+                </li>
+                <!--
+                <li>
+                    <a href="https://webster.cs.washington.edu/jslint/?referer">
+                        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+                    </a>
+                </li>
+                -->
+			</ul>
+        </div>
+
+    </body>
+</html>
+
+<script src="../../js/iife/ascii.js"></script>
