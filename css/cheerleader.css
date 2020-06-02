@@ -1,0 +1,8 @@
+#cheers > li{
+    color: red;
+    font-size: xx-large;
+    font-style: italic;
+    list-style-type: none;
+    display: inline;
+    letter-spacing: 1em;
+}
