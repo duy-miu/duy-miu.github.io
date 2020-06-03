@@ -5,7 +5,7 @@
         
         //first item: Display user information
         $.ajax({
-            'url': 'http://jsonplaceholder.typicode.com/users/1',
+            'url': 'https://jsonplaceholder.typicode.com/users/1',
             'type': 'GET',
             'success': function(obj){
                 var content = "<div>";
@@ -30,7 +30,7 @@
         
         //second item: Display all posts from selected user
         $.ajax({
-            'url': 'http://jsonplaceholder.typicode.com/posts?users/1',
+            'url': 'https://jsonplaceholder.typicode.com/posts?users/1',
             'type': 'GET',
             'success': function(arr){
                 var content = "<div>";
@@ -57,7 +57,7 @@
 
         //third item: Display all comments from selected post 
         $.ajax({
-            'url': 'http://jsonplaceholder.typicode.com/comments?postId=1',
+            'url': 'https://jsonplaceholder.typicode.com/comments?postId=1',
             'type': 'GET',
             'success': function(arr){
                 var content = "<div>";

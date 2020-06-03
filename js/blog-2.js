@@ -5,7 +5,7 @@
 
         //load data
         $.ajax({
-            'url': 'http://jsonplaceholder.typicode.com/users',
+            'url': 'https://jsonplaceholder.typicode.com/users',
             'type': 'GET',
             'success': function(arr){
                 var content = "";
@@ -31,7 +31,7 @@
             var userId = $('#userId').val();
             //Display user information
             $.ajax({
-                'url': 'http://jsonplaceholder.typicode.com/users/'+ userId,
+                'url': 'https://jsonplaceholder.typicode.com/users/'+ userId,
                 'type': 'GET',
                 'success': function(obj){
                     var content = "<div>";
@@ -52,7 +52,7 @@
 
             //Display all posts from selected user
             $.ajax({
-                'url': 'http://jsonplaceholder.typicode.com/posts?userId=' + userId,
+                'url': 'https://jsonplaceholder.typicode.com/posts?userId=' + userId,
                 'type': 'GET',
                 'success': function(arr){
                     var content = "<div>";
@@ -75,7 +75,7 @@
                         var postId = this.id.replace("btn","");
                         //Display all comments from selected post 
                         $.ajax({
-                            'url': 'http://jsonplaceholder.typicode.com/comments?postId=' + postId,
+                            'url': 'https://jsonplaceholder.typicode.com/comments?postId=' + postId,
                             'type': 'GET',
                             'success': function(arr){
                                 var content = "<div>";
