@@ -1,0 +1,19 @@
+
+li {
+    padding: 5px;
+}
+
+li > div {
+    background-color: wheat;
+    border-radius: 2px;
+    padding: 5px;
+    font-style: italic;
+
+}
+
+li > div > blockquote {
+    margin-top: 5px;
+    border: 1px dashed black;
+    border-radius: 2px;
+    padding: 5px;
+}

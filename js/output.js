@@ -18,8 +18,9 @@
     }
     
     function ajaxFailure(xhr, status, exception) {
-      console.log(xhr, status, exception);
+        $('#output').val(status.statusText);
+        console.log(xhr, status, exception);
     }
     
-    $.get('https://www.google.com/images/branding/product/ico/googleg_lodp.ico');
+    //$.get('https://www.google.com/images/branding/product/ico/googleg_lodp.ico');
 })();
