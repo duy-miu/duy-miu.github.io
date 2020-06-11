@@ -1,0 +1,22 @@
+table {
+    background-color: aquamarine;
+    width: 60%;
+    margin: auto;
+    text-align: right;
+}
+
+table > tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+
+tr > td:nth-child(1) , tr > th:nth-child(1) {
+    text-align: left;
+}
+
+tr > td:nth-child(2) , tr > th:nth-child(2) {
+    text-align: left;
+}
+
+caption{
+    font-size: 30px;
+}

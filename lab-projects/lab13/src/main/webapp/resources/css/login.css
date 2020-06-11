@@ -1,0 +1,33 @@
+form{
+    margin: auto;
+    width: 350px;
+}
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3pt;
+}
+fieldset{
+    padding: 8pt;
+    border-radius: 3pt;
+    margin: 4pt;
+    margin-right: 0px;
+}
+fieldset > span > label {
+    display: inline-block;
+    width: 220px;
+    padding-left: 5px;
+    margin: 5px;
+}
+fieldset > span > label ~ input {
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+}
+fieldset > input {
+    height: 25px;
+    background-color: cornflowerblue;
+    margin-left: 10pt;
+    font-size: 10pt;
+}

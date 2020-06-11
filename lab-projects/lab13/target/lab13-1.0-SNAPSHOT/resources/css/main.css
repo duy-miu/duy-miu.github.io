@@ -1,0 +1,9 @@
+body{
+    background-color: lavenderblush;
+    color: darkred;
+}
+
+body{
+    background: white;
+    background: linear-gradient(90deg, white 0%, yellow 35%, cyan 100%);
+}

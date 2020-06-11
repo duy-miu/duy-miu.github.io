@@ -1,0 +1,104 @@
+table {
+    background-color: aquamarine;
+    width: 60%;
+    margin: auto;
+    text-align: right;
+}
+
+table > tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+
+tr > td:nth-child(1) , tr > th:nth-child(1) {
+    text-align: left;
+}
+
+tr > td:nth-child(2) , tr > th:nth-child(2) {
+    text-align: left;
+}
+
+caption{
+    font-size: 30px;
+}
+
+h1{
+    text-align: center;
+    padding: 5pt;
+}
+#content{
+    margin: auto;
+    width: 800px;
+    border-color: gray;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 20px;
+    overflow: auto;
+    position: relative;
+    padding: 0px;
+    overflow-x: hidden;
+}
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3pt;
+}
+fieldset{
+    padding: 8pt;
+    border-radius: 3pt;
+    margin: 4pt;
+    margin-right: 0px;
+}
+fieldset > span > label {
+    display: inline-block;
+    width: 220px;
+    padding-left: 5px;
+    margin: 5px;
+}
+fieldset > span > label ~ input {
+    display: inline-block;
+    width: 200px;
+    margin: 5px;
+}
+fieldset > span > label > span {
+    color: red;
+}
+#checkout{
+    width: 540px;
+    float: left;
+    position: relative;
+}
+div#checkout > div {
+    font-size: 16pt;
+    text-align: center;
+    background-color: lightskyblue;
+}
+form > input {
+    height: 25px;
+    background-color: cornflowerblue;
+    margin-left: 10pt;
+    font-size: 10pt;
+}
+#shopping-cart{
+    float: right;
+    width: 258px;
+    font-family: "Arial","sans-serif";
+    border: 1px solid gray;
+}
+div#shopping-cart > div {
+    font-size: 14pt;
+    text-align: center;
+    background-color: #A2B964;
+}
+div#shopping-cart > ul > li {
+    list-style: none;
+    padding-left: 2px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px dashed #A2B964;
+}
+div#shopping-cart > ul > li > span {
+    position: absolute;
+    right: 3pt;
+    margin-right: 3pt;
+}
