@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        (function($){
+            "use strict";
+            $(document).ready(function () {
+               //alert("Load");
+               $.ajax({
+                   'url':'home?action=read',
+                   'type':'POST',
+                   'success':function (responseList) {
+                       fillTable(responseList)
+                   },
+                   'error':function(xhr,status,exception){
+                       console.log(status);
+                       console.log(exception);
+                   }
+               })
+
+
+                $('button').on('click',function () {
+                    alert('Add');
+                    $.ajax({
+                       'url':'home?action=create&id='+$("#id").val()+'&name='+$("#name").val()+'&email='+$("#email").val()+'&phone='+$("#phone").val(),
+                        'type':'POST',
+                        //'dataType':'application/json',
+                        'success':function (responseList) {
+                            fillTable(responseList)
+                        },
+                        'error':function(xhr,status,exception){
+                            console.log(status);
+                            console.log(exception);
+                        }
+                    });
+                })
+
+                function fillTable(list) {
+                    var html ="";
+                    for(var i=0;i<list.length;i++){
+                        var obj=list[i];
+                        html +="<tr>";
+                        html +="<td>"+obj.id+"</td>";
+                        html +="<td>"+obj.name+"</td>";
+                        html +="<td>"+obj.email+"</td>";
+                        html +="<td>"+obj.phone+"</td>";
+                        html +="</tr>";
+                    }
+                    var table = $('#list');
+                    table.html(html);
+                }
+            });
+
+        })(jQuery);
+    </script>
+    </head>
+    <body>
+
+    ID: <input type="text" id="id"/><br/>
+    Name: <input type="text" id="name"/><br/>
+    Email: <input type="text" id="email"/><br/>
+    Phone: <input type="text" id="phone"/><br/>
+    <button>Add</button>
+    <hr/>
+        <table id="list"></table>
+
+    <ul>
+        Test
+        <li><a href="home?action=read">HOME</a></li>
+    </ul>
+    </body>
+</html>
